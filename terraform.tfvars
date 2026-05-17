@@ -1,8 +1,7 @@
-# Terraform variable values
-# Copy this file to terraform.tfvars and update with your specific values
+# Terraform variable values for development environment
 
-# Azure subscription ID
-subscription_id = "53b96680-2c85-499c-b6ef-db43e176ef53"
+# Development subscription ID (where resources will be created)
+development_subscription_id = "53b96680-2c85-499c-b6ef-db43e176ef53"
 
 # Service Principal (optional - leave as null if not using)
 service_principal_object_id = null

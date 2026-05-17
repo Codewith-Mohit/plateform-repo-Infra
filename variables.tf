@@ -2,13 +2,18 @@ variable "location"{
   description = "The Azure region where the resources will be created."
   type        = string
   default     = "westeurope"
-  }
+}
+
+variable "development_subscription_id" {
+  description = "The Azure subscription ID for the development environment"
+  type        = string
+}
 
 variable "resource_group_name" {
   description = "The name of the resource group."
   type        = string
-  default     = "rgrp-gitops-project-infra"
-  }
+  default     = "rg-development"
+}
 
 variable "vnet-name" {
     description = "The name of the virtual network."
@@ -40,7 +45,7 @@ variable "aks-cluster-name" {
     default     = "aks-project-infra"
 }
 
-varible "acr-name" {
+variable "acr-name" {
     description = "The name of the Azure Container Registry."
     type        = string
     default     = "acrprojectinfra"

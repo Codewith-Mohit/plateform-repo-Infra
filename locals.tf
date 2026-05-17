@@ -1,6 +1,7 @@
 # Data source for current Azure context
 data "azurerm_client_config" "current" {}
 
+
 # Local values for common configuration
 locals {
   common_tags = merge(

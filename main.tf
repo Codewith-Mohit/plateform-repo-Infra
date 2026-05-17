@@ -24,13 +24,6 @@ provider "azurerm" {
   subscription_id = var.development_subscription_id
 }
 
-locals {
-  common_tags = {
-    environment = "development"
-    project     = "terraform-sample"
-  }
-}
-
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
@@ -88,10 +81,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
     ssh_key {
       key_data = var.ssh_public_key
     }
-  }
-
-  role_based_access_control {
-    enabled = true
   }
 
   tags = local.common_tags

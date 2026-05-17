@@ -51,3 +51,22 @@ variable "ssh_public_key" {
   sensitive   = true
   default     = ""
 }
+
+# Tags
+variable "environment" {
+  description = "Environment name"
+  type        = string
+  default     = "production"
+}
+
+variable "project" {
+  description = "Project name"
+  type        = string
+  default     = "infrastructure-app"
+}
+
+variable "additional_tags" {
+  description = "Additional tags to apply to resources"
+  type        = map(string)
+  default     = {}
+}

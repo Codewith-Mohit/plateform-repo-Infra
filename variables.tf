@@ -45,6 +45,12 @@ variable "aks_admin_username" {
   default     = "azureuser"
 }
 
+variable "aks_node_vm_size" {
+  description = "VM size for AKS default node pool. Use a family with available quota in the target region."
+  type        = string
+  default     = "Standard_D2s_v3"
+}
+
 variable "ssh_public_key" {
   description = "SSH public key for AKS node access. Set this in terraform.tfvars or via environment variables."
   type        = string

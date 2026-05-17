@@ -1,4 +1,4 @@
-variable "location"{
+variable "location" {
   description = "The Azure region where the resources will be created."
   type        = string
   default     = "westeurope"
@@ -15,38 +15,39 @@ variable "resource_group_name" {
   default     = "rg-development"
 }
 
-variable "vnet-name" {
-    description = "The name of the virtual network."
-    type        = string
-    default     = "vnet-project-infra"
+variable "vnet_name" {
+  description = "The name of the virtual network."
+  type        = string
+  default     = "vnet-project-infra"
 }
 
-variable "subnet-name" {
-    description = "The name of the subnet."
-    type        = string
-    default     = "snet-project-infra"
+variable "subnet_name" {
+  description = "The name of the subnet."
+  type        = string
+  default     = "snet-project-infra"
 }
 
-variable "storage-account-name" {
-    description = "The name of the storage account."
-    type        = string
-    default     = "strg-project-infra"
+variable "aks_cluster_name" {
+  description = "The name of the AKS cluster."
+  type        = string
+  default     = "aks-project-infra"
 }
 
-variable "container-name" {
-    description = "The name of the container."
-    type        = string
-    default     = "cntr-project-infra"
+variable "acr_name" {
+  description = "The name of the Azure Container Registry."
+  type        = string
+  default     = "acrprojectinfra"
 }
 
-variable "aks-cluster-name" {
-    description = "The name of the AKS cluster."
-    type        = string
-    default     = "aks-project-infra"
+variable "aks_admin_username" {
+  description = "Linux admin username for AKS nodes."
+  type        = string
+  default     = "azureuser"
 }
 
-variable "acr-name" {
-    description = "The name of the Azure Container Registry."
-    type        = string
-    default     = "acrprojectinfra"
+variable "ssh_public_key" {
+  description = "SSH public key for AKS node access. Set this in terraform.tfvars or via environment variables."
+  type        = string
+  sensitive   = true
+  default     = ""
 }

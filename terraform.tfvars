@@ -10,3 +10,6 @@ service_principal_object_id = null
 resource_group_name = "rg-development"
 location            = "westeurope"
 
+# AKS SSH public key
+# ssh_public_key = "ssh-rsa AAAA..."
+
